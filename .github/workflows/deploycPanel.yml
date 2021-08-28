@@ -1,4 +1,0 @@
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/carlosgpe/domain/blog.charliegperez.com
-    - /bin/cp -R public/* $DEPLOYPATH
