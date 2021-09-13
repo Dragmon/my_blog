@@ -3,8 +3,6 @@ on:
   push:
     branches:
       - main
-    paths-ignore:
-      - 'src/'
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
@@ -19,3 +17,4 @@ jobs:
         ftp-server: ${{ secrets.FTP_SERVER }}
         ftp-username: ${{ secrets.FTP_USERNAME }}
         ftp-password: ${{ secrets.FTP_PASSWORD }}
+        exclude: .github** src/** .gitignore* .gitignore*/**
