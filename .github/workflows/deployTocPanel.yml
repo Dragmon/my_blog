@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'public/*'
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
@@ -17,4 +19,4 @@ jobs:
         ftp-server: ${{ secrets.FTP_SERVER }}
         ftp-username: ${{ secrets.FTP_USERNAME }}
         ftp-password: ${{ secrets.FTP_PASSWORD }}
-        local_dir: "./public"
+        local-dir: public/
